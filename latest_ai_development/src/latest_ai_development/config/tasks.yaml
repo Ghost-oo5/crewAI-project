@@ -1,0 +1,14 @@
+prompt_engineer_task:
+  description: >
+    Analyze the user's prompt and generate a professional prompt for the image generator.
+  expected_output: >
+    A professional prompt for the image generator.
+  agent: prompt_engineer
+
+image_generator_task:
+  description: >
+    Generate an image based on the prompt.
+  expected_output: >
+    A fully fledged image.
+  agent: image_generator
+
