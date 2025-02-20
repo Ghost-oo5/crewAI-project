@@ -1,38 +1,42 @@
-# src/my_project/tools/custom_tool.py
-
-import os
 import requests
+from crewai.tools import BaseTool
+from typing import Type
+from pydantic import BaseModel, Field
 
-# It's a good practice to store your API key in your .env file.
-# You can then load it using os.getenv. For now, we'll use the provided key.
-API_KEY = os.getenv("STARRYAI_API_KEY", "2ebGIvkSFD1Kp2KtjpyM1eMHStfETA")
+API_KEY = "2ebGIvkSFD1Kp2KtjpyM1eMHStfETA"
 API_URL = "https://api.starryai.com/creations/"
 
-def generate_images(
-    model="lyra",
-    aspect_ratio="square",
-    high_resolution=False,
-    images=4,
-    steps=20,
-    initial_image_mode="color"
-):
-    headers = {
-        "X-API-Key": API_KEY,
-        "accept": "application/json",
-        "content-type": "application/json"
-    }
-    payload = {
-        "model": model,
-        "aspectRatio": aspect_ratio,
-        "highResolution": high_resolution,
-        "images": images,
-        "steps": steps,
-        "initialImageMode": initial_image_mode
-    }
-    
-    response = requests.post(API_URL, headers=headers, json=payload)
-    
-    if response.status_code == 200:
-        return response.json()
-    else:
-        raise Exception(f"API Error {response.status_code}: {response.text}")
+class GenerateImageInput(BaseModel):
+    """Input schema for image generation."""
+    prompt: str = Field(description="The text prompt to generate the image from")
+
+class GenerateImageTool(BaseTool):
+    name: str = "generate_image"
+    description: str = "Generate images using the StarryAI API based on text prompts"
+    args_schema: Type[BaseModel] = GenerateImageInput
+
+    def _run(self, prompt: str) -> str:
+        """Execute the image generation"""
+        headers = {
+            "accept": "application/json",
+            "X-API-Key": API_KEY,
+            "content-type": "application/json"
+        }
+        
+        payload = {
+            "model": "lyra",
+            "aspectRatio": "square",
+            "highResolution": False,
+            "images": 1,
+            "steps": 20,
+            "initialImageMode": "color",
+            "prompt": prompt
+        }
+        
+        try:
+            response = requests.post(API_URL, headers=headers, json=payload)
+            response.raise_for_status()
+            result = response.json()
+            return f"Image generation successful: {result}"
+        except requests.RequestException as e:
+            return f"Error generating image: {str(e)}"

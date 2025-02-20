@@ -1,4 +1,43 @@
-User name is John Doe.
-User is an AI Engineer.
-User is interested in AI Agents.
-User is based in San Francisco, California.
+User Profile:
+- Name: Abdul Basit
+- Profession: AI Engineer
+- Location: Islamabad, Pakistan
+- Expertise: AI Agents and Image Generation
+
+Image Generation Preferences:
+- Primary Focus: High-quality AI-generated images with accurate text and professional output
+- Quality Priority: Text accuracy and clarity, especially in infographics
+- Attention to Detail: Spelling and grammar accuracy in generated images
+
+AI Model Experience:
+- Familiar with: Midjourney, Stable Diffusion, Leonardo AI, DALL-E, Adobe Firefly
+- Special Interest: Infographics and professional visual content
+
+Common Use Cases:
+- Professional infographics with accurate text
+- Technical diagrams and charts
+- AI-enhanced realistic images
+- Professional business visuals
+
+Output Preferences:
+- Resolution: High-quality outputs
+- Text: Clear, legible, and correctly spelled
+- Style: Professional and polished
+- Format: Clean, structured layouts
+
+Project Goals:
+- Generate high-quality AI images across different styles
+- Ensure text accuracy in generated images
+- Maintain professional standards in outputs
+- Optimize prompts for different AI models
+
+Language Preferences:
+- Primary: English
+- Focus: Professional and technical terminology
+- Style: Clear, precise instructions
+
+Special Requirements:
+- Double-check spelling in generated images
+- Verify text accuracy before finalizing
+- Ensure professional presentation
+- Maintain consistency in style and quality
