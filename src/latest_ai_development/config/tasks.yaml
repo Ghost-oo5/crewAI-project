@@ -1,0 +1,217 @@
+prompt_engineer_task:
+  description: >
+    Enhance this prompt: "{prompt}"
+    Negative prompt: "{negative_prompt}"
+    For the selected AI model: {selected_model}
+    Image Type: {image_type}
+    Dimensions: {dimensions}
+
+    Your task is to:
+    1. Analyze the original prompt and image type requirements
+    2. Structure an enhanced prompt following the model-specific guidelines
+    3. Format the negative prompt according to the selected model's syntax
+    4. Add appropriate technical parameters and settings
+    5. Ensure all text is properly formatted and spelled correctly
+
+    Image Type-Specific Guidelines:
+
+    Realism-Based Images:
+    - Photorealistic: Focus on lighting, shadows, and real-world details
+    - Hyperrealistic: Emphasize extreme detail, textures, and surface qualities
+    - AI-Enhanced Realism: Balance realism with subtle AI enhancements
+
+    Artistic & Stylized Images:
+    - Illustrations: Specify art style, line work, and color palette
+    - Concept Art: Include environment details, character design elements
+    - Cartoon & Anime: Define style references and characteristic features
+    - Pixel Art: Specify resolution and color limitations
+    - Oil Painting/Watercolor/Sketch: Include medium-specific techniques
+
+    Abstract & Surreal Images:
+    - Dreamlike/Fantasy: Focus on mood, atmosphere, and impossible elements
+    - Glitch/Cyberpunk: Include digital artifacts, neon elements
+    - Geometric/Minimalist: Emphasize shapes, patterns, and simplicity
+
+    Informational & Infographics:
+    - Diagrams & Charts: Request clear layout and data visualization
+    - Infographics: Specify text accuracy, layout structure, and data flow
+    - Always include "with correct spelling and grammar"
+
+    Specific-Use Cases:
+    - Logos & Branding: Focus on scalability and brand elements
+    - UI/UX Mockups: Include device context and interface elements
+    - 3D Renders: Specify lighting, materials, and camera angles
+    - AI-Generated Faces: Define demographic details and expressions
+
+    Model-Specific Guidelines:
+
+    Midjourney:
+    - Use detailed descriptions and style keywords
+    - Include relevant parameters (--s, --chaos, --ar, --quality)
+    - Reference artistic styles or artists
+    - For negative prompts, use "--no" prefix for each element
+
+    Stable Diffusion:
+    - Create longer, detailed prompts
+    - Include negative prompts in [negative_prompt] format
+    - Use --quality and --CFG parameters
+
+    Leonardo AI:
+    - Create a single, flowing paragraph for the main prompt
+    - Add negative prompts in a separate section prefixed with "Negative:"
+    - Writing style guidelines:
+      * Combine all elements into one cohesive, flowing description
+      * Keep descriptions tight and impactful
+      * Use commas and connecting words to link ideas smoothly
+      * Avoid separate paragraphs or numbered sections
+      * Balance technical and emotional elements in natural language
+      * Focus on the most striking visual elements
+    - Key elements to weave together:
+      * Subject details and actions
+      * Lighting and atmosphere
+      * Environmental context
+      * Visual style and technical aspects
+      * Emotional impact
+    - Example structure:
+      "[Subject details], [scene setting], [technical aspects], [emotional elements]"
+      All flowing naturally as one continuous description
+
+    DALL-E:
+    - Keep prompts concise and clear
+    - Include negative elements with "no" or "without" in the main prompt
+    - Only specify art medium if mentioned in original prompt
+    - Focus on composition and details
+    - Use descriptive adjectives for mood and atmosphere
+
+    Adobe Firefly:
+    - Use creative, imaginative concepts
+    - Include negative elements with "exclude" or "without" keywords
+    - Include text effects and color palettes
+    - Optimize for Adobe tool integration
+
+    Additional Guidelines for Infographics:
+    - Explicitly request clear, legible text
+    - Specify "with correct spelling and grammar"
+    - For text-heavy designs, break down text elements clearly
+    - Request professional typography and layout
+    - Example infographic structure:
+      "Create a professional infographic with clear, correctly spelled text showing [content],
+      featuring legible typography, proper spacing, and accurate labels"
+
+    Platform-Specific Image Dimensions & Guidelines:
+
+    Instagram:
+      Dimensions:
+        - Feed Post: 1080x1080px (1:1 square)
+        - Stories/Reels: 1080x1920px (9:16)
+        - Carousel: 1080x1080px (1:1)
+        - IGTV Cover: 420x654px (1:1.55)
+      Style Guidelines:
+        - High-quality, visually striking images
+        - Clear focal point
+        - Brand consistent colors
+        - Space for text overlay (if needed)
+        - Mobile-first optimization
+
+    Facebook:
+      Dimensions:
+        - Feed Post: 1200x630px (1.91:1)
+        - Stories: 1080x1920px (9:16)
+        - Profile Picture: 170x170px
+        - Cover Photo: 851x315px
+      Style Guidelines:
+        - Engaging visuals that stop scrolling
+        - Clear branding elements
+        - Text overlay friendly
+        - Attention to mobile and desktop views
+
+    LinkedIn:
+      Dimensions:
+        - Feed Post: 1200x627px (1.91:1)
+        - Company Banner: 1536x768px
+        - Profile Banner: 1584x396px
+        - Profile Picture: 400x400px
+      Style Guidelines:
+        - Professional and clean aesthetic
+        - Corporate-friendly imagery
+        - Clear value proposition space
+        - Brand consistency
+
+    Twitter:
+      Dimensions:
+        - Feed Post: 1600x900px (16:9)
+        - Header Photo: 1500x500px
+        - Profile Picture: 400x400px
+      Style Guidelines:
+        - Eye-catching visuals
+        - Clear messaging
+        - Mobile-optimized
+        - Space for tweet text
+
+    YouTube:
+      Dimensions:
+        - Thumbnail: 1280x720px (16:9)
+        - Channel Banner: 2560x1440px
+        - Channel Profile: 800x800px
+      Style Guidelines:
+        - High contrast for visibility
+        - Clear, readable text
+        - Emotional hooks
+        - Action-oriented visuals
+        - Avoid cluttered backgrounds
+
+    Pinterest:
+      Dimensions:
+        - Standard Pin: 1000x1500px (2:3)
+        - Square Pin: 1000x1000px
+        - Story Pin: 1080x1920px
+      Style Guidelines:
+        - Vertical orientation preferred
+        - Rich, detailed visuals
+        - Clear typography
+        - Inspirational content
+        - Brand watermarks
+
+    Content Type Guidelines:
+
+    Marketing Materials:
+      - Product Photos: Clean background, detailed features
+      - Brand Assets: Consistent style, scalable elements
+      - Promotional Graphics: Clear CTA, compelling visuals
+      - Campaign Images: Theme consistency, emotional appeal
+
+    Social Content:
+      - UGC Style: Authentic, relatable imagery
+      - Story Content: Dynamic, engaging visuals
+      - Educational Posts: Clear information hierarchy
+      - Entertainment: Eye-catching, shareable content
+
+    Important Technical Notes:
+      - Always maintain aspect ratio when resizing
+      - Consider safe zones for text and important elements
+      - Export in appropriate format (JPG for photos, PNG for graphics)
+      - Optimize file size without quality loss
+      - Test visibility on both dark and light modes
+
+    Important:
+    - Maintain the core elements of the original prompt
+    - Don't add artistic mediums unless specified in the original prompt
+    - Preserve the user's creative intent
+    - Reason again and again until you are confident that you are giving correct answer
+    - Think as a human being that are you giving what the user asked for? if not then try again and again till you are confident that results are what user asked for
+    - For infographics, double-check that the prompt emphasizes text accuracy and clarity
+
+  expected_output: |
+    Enhanced Prompt: A refined and optimized prompt including specific artistic direction, technical details, and correct formatting based on the selected AI model.
+    Negative Prompt: A properly formatted negative prompt with clear exclusions, ensuring optimal image generation.
+    Model-Specific Parameters: Additional quality settings, aspect ratio, and other necessary technical details tailored for the selected model.
+  agent: prompt_engineer
+
+# image_generator_task:
+#   description: >
+#     Generate an image based on the prompt.
+#   expected_output: >
+#     A fully fledged image.
+#   agent: image_generator
+#   max_iterations: 1
+
